@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DECODE Sprint — Bright Universe</title>
+<meta name="description" content="DECODE Sprint — стратегический разбор продукта на данных. За 2–3 недели: приоритизированные гипотезы, позиционирование и UX-решение ключевого сценария.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#08080a',
+          surface: '#141418',
+          surface2: '#1c1c22',
+          line: '#2a2a31',
+          muted: '#9a9aa4',
+          lime: '#E7FF6E',
+          pink: '#EF4FA0',
+        },
+        fontFamily: {
+          display: ['Unbounded', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-bg text-white font-body antialiased">
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 border-b border-line/60 bg-bg/80 backdrop-blur">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#top" class="font-display text-sm tracking-wide shrink-0">BRIGHT UNIVERSE</a>
+    <nav class="hidden md:flex items-center gap-7 text-sm text-muted">
+      <a href="#audit" class="hover:text-white transition-colors">Аудит</a>
+      <a href="#method" class="hover:text-white transition-colors">Метод</a>
+      <a href="#sprint" class="hover:text-white transition-colors">Sprint</a>
+      <a href="#contact" class="hover:text-white transition-colors">Контакты</a>
+    </nav>
+    <a href="https://t.me/victoriachupakhina28?text=Здравствуйте%2C%20Виктория!%20Хочу%20обсудить%20DECODE%20Sprint."
+       target="_blank" rel="noopener"
+       class="hidden sm:inline-flex items-center gap-2 rounded-full bg-lime text-black font-body font-semibold text-sm px-5 py-2.5 hover:bg-white transition-colors">
+      Обсудить в Telegram
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden pt-40 pb-20 px-6">
+    <div class="glow-pink"></div>
+    <div class="glow-lime"></div>
+    <div class="max-w-4xl mx-auto relative">
+      <p class="font-body text-sm tracking-[0.2em] text-pink uppercase mb-6 reveal-line" style="--d:0">Bright Universe / DECODE</p>
+      <h1 class="font-display font-800 text-[2.1rem] leading-[1.12] sm:text-5xl sm:leading-[1.1] md:text-6xl md:leading-[1.08] font-bold">
+        <span class="reveal-word" style="--i:1">Не</span> <span class="reveal-word" style="--i:2">ещё</span> <span class="reveal-word" style="--i:3">один</span> <span class="reveal-word" style="--i:4">дизайнер.</span><br>
+        <span class="reveal-word" style="--i:5">Партнёр,</span> <span class="reveal-word" style="--i:6">который</span> <span class="reveal-word" style="--i:7">считает,</span>
+        <span class="reveal-word text-lime" style="--i:8">где</span> <span class="reveal-word text-lime" style="--i:9">вы</span> <span class="reveal-word text-lime" style="--i:10">теряете</span> <span class="reveal-word text-lime" style="--i:11">деньги</span>
+        <span class="reveal-word" style="--i:12">—</span> <span class="reveal-word" style="--i:13">и</span> <span class="reveal-word" style="--i:14">что</span> <span class="reveal-word" style="--i:15">чинить</span> <span class="reveal-word" style="--i:16">первым.</span>
+      </h1>
+      <p class="mt-8 text-lg text-muted max-w-2xl leading-relaxed reveal-line" style="--d:9">
+        DECODE Sprint — стратегический разбор продукта на данных. За 2–3 недели: приоритизированные
+        гипотезы, позиционирование и UX-решение ключевого сценария. Decision-ready пакет,
+        а не ещё одна колода макетов.
+      </p>
+      <div class="mt-10 flex flex-wrap items-center gap-4 reveal-line" style="--d:11">
+        <a href="https://t.me/victoriachupakhina28?text=Здравствуйте%2C%20Виктория!%20Хочу%20обсудить%20DECODE%20Sprint."
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 rounded-full bg-lime text-black font-semibold px-7 py-4 hover:bg-white transition-colors">
+          Обсудить Sprint в Telegram
+        </a>
+        <a href="#sprint" class="inline-flex items-center gap-2 text-sm text-muted hover:text-white transition-colors underline underline-offset-4 decoration-line">
+          Что входит в Sprint ↓
+        </a>
+      </div>
+
+      <div class="mt-16 grid grid-cols-3 gap-6 max-w-xl border-t border-line/60 pt-8 reveal-line" style="--d:13">
+        <div>
+          <p class="font-display font-bold text-2xl sm:text-3xl text-lime">200k ₽</p>
+          <p class="text-xs text-muted mt-1 leading-snug">фиксированная стоимость</p>
+        </div>
+        <div>
+          <p class="font-display font-bold text-2xl sm:text-3xl">2–3</p>
+          <p class="text-xs text-muted mt-1 leading-snug">недели до decision-ready отчёта</p>
+        </div>
+        <div>
+          <p class="font-display font-bold text-2xl sm:text-3xl">15+</p>
+          <p class="text-xs text-muted mt-1 leading-snug">индустрий опыта</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problem" class="px-6 py-20 border-t border-line/60">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-display font-bold text-2xl sm:text-3xl max-w-xl" data-reveal>Знакомо?</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-5">
+        <div class="rounded-2xl bg-surface border border-line/60 p-7" data-reveal data-reveal-delay="1">
+          <p class="text-pink text-sm font-semibold mb-3">01</p>
+          <p class="text-[15px] leading-relaxed text-white/90">
+            Есть идея, бюджет и продукт, собранный на no-code / vibe-coding. Нет позиционирования,
+            UX Flow и дизайн-стратегии.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-surface border border-line/60 p-7" data-reveal data-reveal-delay="2">
+          <p class="text-pink text-sm font-semibold mb-3">02</p>
+          <p class="text-[15px] leading-relaxed text-white/90">
+            Продукт уже в проде. Растёт отток клиентов или вал ошибок и тикетов в поддержку —
+            и непонятно, откуда они берутся.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-surface border border-line/60 p-7" data-reveal data-reveal-delay="3">
+          <p class="text-pink text-sm font-semibold mb-3">03</p>
+          <p class="text-[15px] leading-relaxed text-white/90">
+            Продукт «выглядит как шаблон», разработка тормозит, дизайн хаотичен. Бюджет на редизайн
+            есть, уверенности в стратегии — нет.
+          </p>
+        </div>
+      </div>
+      <p class="mt-10 text-muted max-w-2xl text-[15px] leading-relaxed" data-reveal>
+        С какой бы болью вы ни пришли — разбор строится вокруг ваших данных и вашего продукта,
+        а не вокруг типового брифа. Это и есть подход DECODE.
+      </p>
+    </div>
+  </section>
+
+  <!-- AUDIT / BUSINESS-MODEL METRICS -->
+  <section id="audit" class="px-6 py-24 border-t border-line/60 bg-surface/40">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-sm tracking-[0.2em] text-lime uppercase mb-4" data-reveal>Как устроен аудит</p>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl max-w-2xl" data-reveal>
+        Разбор строится под вашу бизнес-модель, а не по универсальному чек-листу
+      </h2>
+      <p class="mt-4 text-muted max-w-2xl text-[15px] leading-relaxed" data-reveal>
+        У маркетплейса, SaaS B2B и мобильного приложения разная механика роста — и разные метрики,
+        которые действительно имеют значение. Прежде чем сформулировать гипотезу, я определяю,
+        в какой системе координат живёт именно ваш продукт.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-2" id="audit-tabs" data-reveal></div>
+
+      <div class="mt-6 rounded-2xl bg-surface border border-line/60 p-7 sm:p-9" data-reveal>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-7" id="audit-panel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method" class="px-6 py-20 border-t border-line/60">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-display font-bold text-2xl sm:text-3xl" data-reveal>Метод DECODE</h2>
+      <p class="mt-4 text-muted max-w-xl text-[15px]" data-reveal>
+        Семь услуг агентства, собранные в один путь — от диагностики до внедрения. Кликните на букву,
+        чтобы увидеть, что происходит внутри каждого шага.
+      </p>
+
+      <div class="mt-10 grid sm:grid-cols-3 lg:grid-cols-6 gap-3" id="method-tabs" data-reveal></div>
+
+      <div class="mt-6 rounded-2xl bg-surface border border-line/60 p-7 sm:p-9" data-reveal>
+        <div id="method-panel"></div>
+      </div>
+
+      <p class="mt-10 text-sm text-muted" data-reveal>
+        В Sprint входят первые три шага метода — <span class="text-white">Diagnose, Evidence, Concept</span>.
+        Остальное — по желанию, отдельным этапом, когда решение уже обосновано.
+      </p>
+    </div>
+  </section>
+
+  <!-- SPRINT / WHAT'S INCLUDED + PRICE -->
+  <section id="sprint" class="px-6 py-24 border-t border-line/60 bg-surface/40">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-sm tracking-[0.2em] text-lime uppercase mb-4" data-reveal>Флагманский продукт</p>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl" data-reveal>DECODE Sprint</h2>
+      <p class="mt-4 text-muted max-w-xl text-[15px] leading-relaxed" data-reveal>
+        Стратегический разбор продукта с внедрением первого шага. Decision-ready пакет за 2–3 недели.
+      </p>
+
+      <div class="mt-12 grid lg:grid-cols-[1.3fr_1fr] gap-6">
+        <div class="rounded-2xl bg-surface border border-line/60 p-8 sm:p-10" data-reveal>
+          <ul class="space-y-5">
+            <li class="flex gap-4">
+              <span class="check">✓</span>
+              <span class="text-[15px] leading-relaxed text-white/90">Data-аудит продукта: UX, воронка, метрики оттока и нагрузки на поддержку</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="check">✓</span>
+              <span class="text-[15px] leading-relaxed text-white/90">Отчёт с приоритизированными гипотезами (impact / effort) и дорожной картой</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="check">✓</span>
+              <span class="text-[15px] leading-relaxed text-white/90">Позиционирование и Key Visual продукта</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="check">✓</span>
+              <span class="text-[15px] leading-relaxed text-white/90">UX Flow ключевого сценария + черновик дизайн-системы, готовый к разработке</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="check">✓</span>
+              <span class="text-[15px] leading-relaxed text-white/90">Презентация для инвесторов или команды с обоснованием решений на данных</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl bg-gradient-to-b from-surface2 to-surface border border-line/60 p-8 sm:p-10 flex flex-col" data-reveal data-reveal-delay="1">
+          <p class="text-sm text-muted uppercase tracking-wide">Стоимость</p>
+          <p class="font-display font-extrabold text-4xl sm:text-5xl mt-2">200 000 ₽</p>
+          <p class="text-sm text-muted mt-3">Срок: 2–3 недели</p>
+          <div class="h-px bg-line my-7"></div>
+          <p class="text-sm text-white/80 leading-relaxed">
+            Sprint — точка входа, не обязательство. Из отчёта видно, что делать дальше —
+            но следующий шаг всегда обсуждается отдельно, без давления.
+          </p>
+          <a href="https://t.me/victoriachupakhina28?text=Здравствуйте%2C%20Виктория!%20Хочу%20обсудить%20DECODE%20Sprint."
+             target="_blank" rel="noopener"
+             class="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-lime text-black font-semibold px-6 py-4 hover:bg-white transition-colors">
+            Обсудить Sprint в Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="px-6 py-20 border-t border-line/60">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-display font-bold text-2xl sm:text-3xl" data-reveal>Как проходит спринт</h2>
+      <p class="mt-4 text-muted max-w-xl text-[15px]" data-reveal>3 недели от брифа до дорожной карты.</p>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <div class="relative pl-6 border-l-2 border-pink/60" data-reveal data-reveal-delay="1">
+          <p class="text-xs tracking-widest text-pink uppercase">Неделя 1</p>
+          <h3 class="font-display font-semibold text-lg mt-2">Diagnose + Evidence</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">
+            Аудит UX, бизнес-логики, метрик; интервью со стейкхолдерами; сбор поведенческих данных.
+          </p>
+        </div>
+        <div class="relative pl-6 border-l-2 border-pink/60" data-reveal data-reveal-delay="2">
+          <p class="text-xs tracking-widest text-pink uppercase">Неделя 2</p>
+          <h3 class="font-display font-semibold text-lg mt-2">Concept</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">
+            Приоритизация гипотез, позиционирование, Key Visual, первые UX-решения.
+          </p>
+        </div>
+        <div class="relative pl-6 border-l-2 border-pink/60" data-reveal data-reveal-delay="3">
+          <p class="text-xs tracking-widest text-pink uppercase">Неделя 3</p>
+          <h3 class="font-display font-semibold text-lg mt-2">Delivery Sprint</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">
+            Финальный отчёт, дорожная карта с этапами, презентация результатов команде.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="px-6 py-24 border-t border-line/60 bg-surface/40">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-[auto_1fr] gap-8 items-start" data-reveal>
+        <img src="assets/images/photo.jpg" alt="Виктория" class="w-20 h-20 rounded-full object-cover border border-line/60"
+             onerror="this.style.display='none'">
+        <div>
+          <blockquote class="font-display font-medium text-xl sm:text-2xl leading-snug">
+            «Мой инструмент — данные. Я не принимаю устоявшееся на веру,
+            а ставлю под сомнение каждый шаблон.»
+          </blockquote>
+          <p class="text-sm text-muted mt-4">Виктория, Bright Universe</p>
+        </div>
+      </div>
+
+      <div class="mt-14" data-reveal>
+        <p class="text-sm text-muted mb-5">Опыт в 15+ индустриях — метод не завязан на нишу, он завязан на данные конкретного продукта</p>
+        <div class="flex flex-wrap gap-2.5">
+          <span class="tag">E-commerce</span>
+          <span class="tag">Banking</span>
+          <span class="tag">FinTech</span>
+          <span class="tag">Crypto</span>
+          <span class="tag">Real Estate</span>
+          <span class="tag">IT / SaaS</span>
+          <span class="tag">Gaming</span>
+          <span class="tag">Education</span>
+          <span class="tag">Medicine</span>
+          <span class="tag">Fashion</span>
+          <span class="tag">Sport</span>
+          <span class="tag">Auto</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="contact" class="px-6 py-28 border-t border-line/60 relative overflow-hidden">
+    <div class="glow-pink-2"></div>
+    <div class="max-w-3xl mx-auto text-center relative" data-reveal>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+        Есть идея? Давайте обсудим<br class="hidden sm:block"> ваш DECODE Sprint.
+      </h2>
+      <a href="https://t.me/victoriachupakhina28?text=Здравствуйте%2C%20Виктория!%20Хочу%20обсудить%20DECODE%20Sprint."
+         target="_blank" rel="noopener"
+         class="mt-10 inline-flex items-center gap-2 rounded-full bg-lime text-black font-semibold px-8 py-4 hover:bg-white transition-colors">
+        Обсудить в Telegram
+      </a>
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted">
+        <a href="mailto:brightuniverseagency@yandex.ru" class="hover:text-white transition-colors">brightuniverseagency@yandex.ru</a>
+        <a href="https://folio-sparkle-fusion.lovable.app" target="_blank" rel="noopener" class="hover:text-white transition-colors">Портфолио</a>
+        <a href="https://brightuniverseagency.ru" target="_blank" rel="noopener" class="hover:text-white transition-colors">brightuniverseagency.ru</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="px-6 py-10 border-t border-line/60">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="font-display text-xs tracking-widest text-muted">BRIGHT UNIVERSE — CONNECTED EXPERIENCES, DATA DRIVEN</p>
+    <p class="text-xs text-muted">© 2026</p>
+  </div>
+</footer>
+
+<script src="js/audit-data.js"></script>
+<script src="js/method-data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
