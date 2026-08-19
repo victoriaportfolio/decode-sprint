@@ -1,30 +1,21 @@
 // Метрики по бизнес-моделям — источник: фреймворк "Department of Product Design by Victoria Bright"
 const AUDIT_DATA = {
-  marketplace: {
-    label: "Маркетплейсы",
+  fintech: {
+    label: "Fintech",
     groups: [
-      { name: "Acquisition", items: ["CAC", "Conversion rate", "Virality / viral cycle"] },
-      { name: "Activation", items: ["% активных продавцов", "Cart abandonment rate", "Search × times rate"] },
-      { name: "Retention", items: ["Churn rate", "Retention по когортам", "% повторных покупателей"] },
-      { name: "Monetization", items: ["GMV growth rate", "LTV", "Take rate / комиссия"] },
+      { name: "Acquisition", items: ["CAC", "Conversion в верификацию (KYC)", "Cost per funded account"] },
+      { name: "Activation", items: ["% прошедших KYC", "Time to first transaction", "Onboarding completion rate"] },
+      { name: "Retention", items: ["Churn rate", "Monthly active accounts", "Retention после первой транзакции"] },
+      { name: "Monetization", items: ["ARPU", "Take rate / комиссия за транзакцию", "LTV"] },
     ],
   },
-  ecommerce: {
-    label: "E-commerce",
+  crypto: {
+    label: "Crypto",
     groups: [
-      { name: "Acquisition", items: ["CAC", "Conversion rate", "Daily / weekly active users"] },
-      { name: "Activation", items: ["Sign up rate", "Add to cart rate", "Cart abandonment rate"] },
-      { name: "Retention", items: ["Churn rate", "Repeat purchase rate", "NPS"] },
-      { name: "Monetization", items: ["AOV", "LTV", "Gross merchandise volume"] },
-    ],
-  },
-  mobile: {
-    label: "Мобильные приложения",
-    groups: [
-      { name: "Acquisition", items: ["App downloads", "CPI", "CAC"] },
-      { name: "Activation", items: ["Average session length", "Time to goal completion"] },
-      { name: "Retention", items: ["Stickiness ratio (DAU/MAU)", "Churn rate"] },
-      { name: "Monetization", items: ["LTV", "ARPU / ARPPU", "MRR"] },
+      { name: "Acquisition", items: ["CAC", "Cost per funded wallet", "Conversion в первый депозит"] },
+      { name: "Activation", items: ["% с завершённым KYC", "Time to first trade", "Wallet connection rate"] },
+      { name: "Retention", items: ["Churn rate", "Trading frequency", "Retention после первой сделки"] },
+      { name: "Monetization", items: ["Trading volume", "Fee revenue per user", "LTV"] },
     ],
   },
   saasb2b: {
@@ -36,22 +27,22 @@ const AUDIT_DATA = {
       { name: "Monetization", items: ["MRR growth rate", "LTV / CAC ratio", "Expansion revenue"] },
     ],
   },
-  saasb2c: {
-    label: "SaaS B2C",
+  mobile: {
+    label: "Мобильные приложения",
     groups: [
-      { name: "Acquisition", items: ["CAC", "% реферальных пользователей"] },
-      { name: "Activation", items: ["Time to value", "% пользователей в онбординге"] },
-      { name: "Retention", items: ["MRR retention", "Churn rate"] },
-      { name: "Monetization", items: ["ARPU", "LTV / CAC ratio"] },
+      { name: "Acquisition", items: ["App downloads", "CPI", "CAC"] },
+      { name: "Activation", items: ["Average session length", "Time to goal completion"] },
+      { name: "Retention", items: ["Stickiness ratio (DAU/MAU)", "Churn rate"] },
+      { name: "Monetization", items: ["LTV", "ARPU / ARPPU", "MRR"] },
     ],
   },
-  media: {
-    label: "Медиа / контент",
+  ai: {
+    label: "AI платформы",
     groups: [
-      { name: "Acquisition", items: ["Page views", "CAC", "Conversion в подписку"] },
-      { name: "Activation", items: ["Reading depth", "Time on page"] },
-      { name: "Retention", items: ["Returning visitors", "Bounce rate"] },
-      { name: "Monetization", items: ["Ads revenue (CPM / CPC)", "Retention подписки"] },
+      { name: "Acquisition", items: ["CAC", "Conversion в free trial / demo", "Cost per activated user"] },
+      { name: "Activation", items: ["% пользователей, завершивших первый сценарий", "Time to first successful output"] },
+      { name: "Retention", items: ["Retention после первого использования", "Churn rate", "Queries / session в неделю"] },
+      { name: "Monetization", items: ["ARPU", "Conversion free → paid", "LTV / CAC ratio"] },
     ],
   },
 };

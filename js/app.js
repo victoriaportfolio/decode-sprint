@@ -54,11 +54,12 @@ function renderAuditTabs() {
 
 if (tabsEl && panelEl) renderAuditTabs();
 
-// DECODE method tabs
-const methodTabsEl = document.getElementById("method-tabs");
-const methodPanelEl = document.getElementById("method-panel");
+// DECODE method — accordion panel opens right under the clicked button,
+// on every breakpoint (mobile: 1 col, so "under the button" is literal;
+// desktop: full-width panel bumped to the next grid row via col-span-full + dense packing).
+const methodGridEl = document.getElementById("method-grid");
 
-function renderMethodPanel(key) {
+function buildMethodPanel(key) {
   const data = METHOD_DATA[key];
   const blocksHtml = data.blocks
     .map(
@@ -82,7 +83,9 @@ function renderMethodPanel(key) {
       </a>`
     : "";
 
-  methodPanelEl.innerHTML = `
+  const panel = document.createElement("div");
+  panel.className = "method-panel col-span-full rounded-2xl bg-surface border border-line/60 p-7 sm:p-9";
+  panel.innerHTML = `
     <div class="flex items-start gap-4 mb-7">
       <span class="method-letter method-letter-lg">${data.letter}</span>
       <div>
@@ -93,11 +96,12 @@ function renderMethodPanel(key) {
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">${blocksHtml}</div>
     ${caseHtml}
   `;
+  return panel;
 }
 
-function renderMethodTabs() {
+function renderMethodGrid() {
   const keys = Object.keys(METHOD_DATA);
-  methodTabsEl.innerHTML = keys
+  methodGridEl.innerHTML = keys
     .map(
       (key, i) => `
         <button class="method-tab${i === 0 ? " is-active" : ""}" data-tab="${key}">
@@ -107,15 +111,116 @@ function renderMethodTabs() {
     )
     .join("");
 
-  methodTabsEl.querySelectorAll(".method-tab").forEach((btn) => {
+  const buttons = methodGridEl.querySelectorAll(".method-tab");
+
+  function activate(key, btn) {
+    buttons.forEach((b) => b.classList.remove("is-active"));
+    btn.classList.add("is-active");
+    const oldPanel = methodGridEl.querySelector(".method-panel");
+    if (oldPanel) oldPanel.remove();
+    btn.insertAdjacentElement("afterend", buildMethodPanel(key));
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => activate(btn.dataset.tab, btn));
+  });
+
+  activate(keys[0], buttons[0]);
+}
+
+if (methodGridEl) renderMethodGrid();
+
+// Result / ROI by niche
+const resultTabsEl = document.getElementById("result-tabs");
+const resultPanelEl = document.getElementById("result-panel");
+
+function renderResultPanel(key) {
+  const data = RESULT_DATA[key];
+  resultPanelEl.innerHTML = data.cards
+    .map(
+      (card) => `
+        <div class="result-card">
+          <h3 class="font-display font-semibold text-base">${card.title}</h3>
+          <p class="text-xs tracking-widest text-pink uppercase mt-4">Куда утекают деньги</p>
+          <p class="text-sm text-white/80 mt-2 leading-relaxed">${card.pain}</p>
+          <p class="text-xs tracking-widest text-lime uppercase mt-4">Что получаете</p>
+          <p class="text-sm text-white/80 mt-2 leading-relaxed">${card.result}</p>
+        </div>`
+    )
+    .join("");
+}
+
+function renderResultTabs() {
+  const keys = Object.keys(RESULT_DATA);
+  resultTabsEl.innerHTML = keys
+    .map(
+      (key, i) =>
+        `<button class="audit-tab${i === 0 ? " is-active" : ""}" data-tab="${key}">${RESULT_DATA[key].label}</button>`
+    )
+    .join("");
+
+  resultTabsEl.querySelectorAll(".audit-tab").forEach((btn) => {
     btn.addEventListener("click", () => {
-      methodTabsEl.querySelectorAll(".method-tab").forEach((b) => b.classList.remove("is-active"));
+      resultTabsEl.querySelectorAll(".audit-tab").forEach((b) => b.classList.remove("is-active"));
       btn.classList.add("is-active");
-      renderMethodPanel(btn.dataset.tab);
+      renderResultPanel(btn.dataset.tab);
     });
   });
 
-  renderMethodPanel(keys[0]);
+  renderResultPanel(keys[0]);
 }
 
-if (methodTabsEl && methodPanelEl) renderMethodTabs();
+if (resultTabsEl && resultPanelEl) renderResultTabs();
+
+// Weekly Sprint plan
+const weeksTabsEl = document.getElementById("weeks-tabs");
+const weeksPanelEl = document.getElementById("weeks-panel");
+
+function renderWeeksPanel(key) {
+  const data = WEEKS_DATA[key];
+  weeksPanelEl.innerHTML = `
+    <div class="flex items-start justify-between flex-wrap gap-3 mb-6">
+      <div>
+        <h3 class="font-display font-bold text-xl">${data.title}</h3>
+        <p class="text-xs tracking-widest text-pink uppercase mt-2">${data.method}</p>
+      </div>
+    </div>
+    <ul class="space-y-3">
+      ${data.items
+        .map(
+          (item) => `
+        <li class="flex gap-3">
+          <span class="check">✓</span>
+          <span class="text-sm text-white/85 leading-relaxed">${item}</span>
+        </li>`
+        )
+        .join("")}
+    </ul>
+    <div class="mt-6 pt-6 border-t border-line/60">
+      <p class="text-xs tracking-widest text-lime uppercase mb-2">На выходе</p>
+      <p class="text-sm text-white/85 leading-relaxed">${data.deliverable}</p>
+    </div>
+  `;
+}
+
+function renderWeeksTabs() {
+  const keys = Object.keys(WEEKS_DATA);
+  weeksTabsEl.innerHTML = keys
+    .map(
+      (key, i) =>
+        `<button class="audit-tab${i === 0 ? " is-active" : ""}" data-tab="${key}">${WEEKS_DATA[key].label}</button>`
+    )
+    .join("");
+
+  weeksTabsEl.querySelectorAll(".audit-tab").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      weeksTabsEl.querySelectorAll(".audit-tab").forEach((b) => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+      renderWeeksPanel(btn.dataset.tab);
+    });
+  });
+
+  renderWeeksPanel(keys[0]);
+}
+
+if (weeksTabsEl && weeksPanelEl) renderWeeksTabs();
