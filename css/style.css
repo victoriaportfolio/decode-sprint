@@ -4,7 +4,7 @@
   right: -10%;
   width: 40rem;
   height: 40rem;
-  background: radial-gradient(circle, rgba(239,79,160,0.18) 0%, rgba(239,79,160,0) 70%);
+  background: radial-gradient(circle, rgba(255,183,204,0.18) 0%, rgba(255,183,204,0) 70%);
   pointer-events: none;
 }
 
@@ -14,7 +14,7 @@
   left: -15%;
   width: 30rem;
   height: 30rem;
-  background: radial-gradient(circle, rgba(231,255,110,0.10) 0%, rgba(231,255,110,0) 70%);
+  background: radial-gradient(circle, rgba(241,255,151,0.10) 0%, rgba(241,255,151,0) 70%);
   pointer-events: none;
 }
 
@@ -25,7 +25,7 @@
   transform: translate(-50%, -50%);
   width: 50rem;
   height: 30rem;
-  background: radial-gradient(ellipse, rgba(239,79,160,0.12) 0%, rgba(239,79,160,0) 70%);
+  background: radial-gradient(ellipse, rgba(255,183,204,0.12) 0%, rgba(255,183,204,0) 70%);
   pointer-events: none;
 }
 
@@ -44,7 +44,7 @@
   height: 2.5rem;
   border-radius: 9999px;
   background: #1c1c22;
-  color: #E7FF6E;
+  color: #F1FF97;
   font-family: 'Unbounded', sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -55,8 +55,8 @@
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 9999px;
-  background: rgba(231,255,110,0.15);
-  color: #E7FF6E;
+  background: rgba(241,255,151,0.15);
+  color: #F1FF97;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -138,7 +138,7 @@
 }
 .method-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(231, 255, 110, 0.4);
+  border-color: rgba(241, 255, 151, 0.4);
   background: #17171d;
 }
 
@@ -160,8 +160,8 @@
   border-color: #3a3a44;
 }
 .audit-tab.is-active {
-  background: #E7FF6E;
-  border-color: #E7FF6E;
+  background: #F1FF97;
+  border-color: #F1FF97;
   color: #08080a;
 }
 
@@ -184,8 +184,8 @@
   color: #fff;
 }
 .method-tab.is-active {
-  border-color: rgba(231, 255, 110, 0.5);
-  background: rgba(231, 255, 110, 0.08);
+  border-color: rgba(241, 255, 151, 0.5);
+  background: rgba(241, 255, 151, 0.08);
   color: #fff;
 }
 .method-tab-letter {
@@ -197,13 +197,13 @@
   flex-shrink: 0;
   border-radius: 9999px;
   background: #1c1c22;
-  color: #E7FF6E;
+  color: #F1FF97;
   font-family: 'Unbounded', sans-serif;
   font-weight: 700;
   font-size: 0.8125rem;
 }
 .method-tab.is-active .method-tab-letter {
-  background: #E7FF6E;
+  background: #F1FF97;
   color: #08080a;
 }
 .method-tab-title {
@@ -221,7 +221,7 @@
   flex-shrink: 0;
   border-radius: 9999px;
   background: #1c1c22;
-  color: #E7FF6E;
+  color: #F1FF97;
   font-family: 'Unbounded', sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
@@ -237,7 +237,7 @@
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
 .case-study-link:hover {
-  border-color: rgba(239, 79, 160, 0.5);
+  border-color: rgba(255, 183, 204, 0.5);
   transform: translateY(-2px);
 }
 
@@ -251,7 +251,7 @@
 }
 .result-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(231, 255, 110, 0.4);
+  border-color: rgba(241, 255, 151, 0.4);
   background: #17171d;
 }
 .result-icon {
@@ -262,14 +262,14 @@
   height: 2.5rem;
   border-radius: 9999px;
   background: #1c1c22;
-  color: #E7FF6E;
+  color: #F1FF97;
   font-weight: 700;
   font-size: 1.1rem;
 }
 .roi-callout {
   border-radius: 1rem;
   padding: 2rem;
-  background: radial-gradient(circle at 20% 20%, rgba(231, 255, 110, 0.08), transparent 60%), #141418;
-  border: 1px solid rgba(231, 255, 110, 0.3);
+  background: radial-gradient(circle at 20% 20%, rgba(241, 255, 151, 0.08), transparent 60%), #141418;
+  border: 1px solid rgba(241, 255, 151, 0.3);
 }
 
